@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 13px Helvetica, Arial;
+}
+
+form input {
+    border: 0;
+    padding: 10px;
+    width: 84%;
+    margin-right: .5%;
+}
+
+form button {
+    width: 15.5%;
+    background: rgb(130, 224, 255);
+    border: none;
+    text-align: center;
+    padding: 10px 0;
+    margin:0;
+}
+
+.msg_area ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin: 10px auto 0;
+}
+
+.user-in {
+    color: #f30;
+}
+
+.tips {
+    padding: 5px 10px;
+}
+
+.msg_area ul li,
+.chat-content {
+    padding: 5px 10px;
+    line-height: 22px;
+}
+
+.msg_area ul li:nth-child(odd),
+.chat-content:nth-child(odd) {
+    background: #eee;
+}
+
+.user-in-name {
+    cursor: pointer;
+}
+
+#mask {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .8);
+    z-index: 100
+}
+
+.layer-text {
+    text-align: center;
+    color: #2fded6
+}
+
+.spinner {
+    margin: 250px auto 30px auto;
+    width: 70px;
+    height: 70px
+}
+
+.container1>div,
+.container2>div,
+.container3>div {
+    width: 16px;
+    height: 16px;
+    background-color: #2fded6;
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+.spinner-container {
+    position: absolute;
+    width: 75px;
+    height: 75px
+}
+
+.container2 {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg)
+}
+
+.container2 .circle1 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s
+}
+
+.container2 .circle2 {
+    -webkit-animation-delay: -.8s;
+    animation-delay: -.8s
+}
+
+.container2 .circle3 {
+    -webkit-animation-delay: -.5s;
+    animation-delay: -.5s
+}
+
+.container2 .circle4 {
+    -webkit-animation-delay: -.2s;
+    animation-delay: -.2s
+}
+
+.container3 {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg)
+}
+
+.container3 .circle1 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s
+}
+
+.container3 .circle2 {
+    -webkit-animation-delay: -.7s;
+    animation-delay: -.7s
+}
+
+.container3 .circle3 {
+    -webkit-animation-delay: -.4s;
+    animation-delay: -.4s
+}
+
+.container3 .circle4 {
+    -webkit-animation-delay: -.1s;
+    animation-delay: -.1s
+}
+
+.circle1 {
+    top: 0;
+    left: 0
+}
+
+.circle2 {
+    top: 0;
+    right: 0
+}
+
+.circle3 {
+    right: 0;
+    bottom: 0
+}
+
+.circle4 {
+    left: 0;
+    bottom: 0
+}
+
+.container1 .circle2 {
+    -webkit-animation-delay: -.9s;
+    animation-delay: -.9s
+}
+
+.container1 .circle3 {
+    -webkit-animation-delay: -.6s;
+    animation-delay: -.6s
+}
+
+.container1 .circle4 {
+    -webkit-animation-delay: -.3s;
+    animation-delay: -.3s
+}
+
+@keyframes bouncedelay {
+    0%,
+    100%,
+    80% {
+        transform: scale(0);
+        -webkit-transform: scale(0)
+    }
+    40% {
+        transform: scale(1);
+        -webkit-transform: scale(1)
+    }
+}
+
+.enter-name {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    color: #fff;
+    text-align: center;
+    display: none
+}
+
+.info {
+    margin-bottom: 10px;
+    font-size: 20px
+}
+
+#nickname {
+    width: 160px;
+    padding: 1px 5px
+}
+
+#send-name {
+    height: 22px
+}
+
+.wrapper {
+    width: 675px;
+    height: 570px;
+    overflow: hidden;
+    padding: 5px 5px 5px 0;
+    background: #ddd;
+    margin: auto;
+    box-shadow: -3px -2px 8px 1px rgba(0, 0, 0, .2)
+}
+
+.left {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.room .left .allusers {
+    padding: 10px 0;
+    width: 80%;
+    position: relative;
+}
+
+.right {
+    float: right;
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.right .user-area {
+    height: 476px;
+    overflow: auto;
+}
+
+.userroom {
+    width: 80%;
+    margin: 10px 0 0 0;
+}
+
+.userroom div {
+    background: #eee;
+    width: 100%;
+    padding: 10px 0;
+    list-style: none;
+    text-indent: 10px;
+    margin-top: 4px;
+}
+
+.userroom .users {
+    position: relative;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.count {
+    font-size: 10px;
+    position: absolute;
+    top: 12px;
+    text-align: center;
+    right: 30px;
+    line-height: 12px;
+    padding: 2px 4px;
+    background: #e24013;
+    border-radius: 16px;
+    color: #fff;
+    visibility: hidden;
+    text-indent: 0;
+}
+
+button {
+    padding: 2px 8px;
+    margin: 0 10px;
+    cursor: pointer
+}
+
+#image {
+    margin-left: 0;
+    width:52px;
+}
+
+.chat-img{
+    border-radius: 12px;
+    -webkit-border-radius:12px;
+    width:100%;
+}
+
+.btns {
+    margin:0 0 5px 0;
+    position: relative;
+    width:52px;
+}
+
+#file {
+    opacity: 0;
+    -webkit-opacity:0;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 100%;
+}
+
+.send-area{
+    background: #000;
+    padding: 3px;
+    width: 100%;
+}
