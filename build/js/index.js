@@ -18,7 +18,10 @@ $('#file').bind('change',function(evt){
     }
     var files_name = '';
     for(var i = 0, f; f = files[i]; i++){
-        if(!f.type.match('image.*')) alert('请上传图片');
+        if(!f.type.match('image.*')) {
+            alert('请上传图片');
+            return;
+        };
         var reader = new FileReader();
         reader.onload = (function(theFile){
             return function(e){
