@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+</head>
+
+<body>
+    <div id="mask">
+        <div class="loading">
+            <div class="spinner">
+                <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+            <div class="layer-text">正在连接中...</div>
+        </div>
+        <div class="enter-name">
+            <p class="info">give yourself a pickname:</p>
+            <input id="nickname" type="text" placeholder="nickname">
+            <button id="send-name" style="width:42px;">ok</button>
+        </div>
+    </div>
+    <div class="room">
+        <div class="tips" style="text-align: center;padding:20px 0;">提示：点击用户名可以进入私聊</div>
+        <div class="wrapper">
+            <div class="left">
+                <div class="allusers" style="text-indent: 10px;"><span class="num">0</span>user online<span class="count">0</span>（群聊模式）</div>
+                <div class="userroom"></div>
+            </div>
+            <div class="right">
+            	<div class="user-area">
+	                <div class="welcome_area"></div>
+	                <div class="msg_area">
+	                    <div class="group-chat-area" style="display: block;">
+	                        <ul id="group_messages"></ul>
+	                    </div>
+	                    <div class="user-chat-area" style="display: none;">
+	                    </div>
+	                </div>
+            	</div>
+                <form action="">
+                    <div class="btns"><button id="image">image</button><input id="file" type="file"></div>
+                    <div class="send-area"><input id="m" autocomplete="off" /><button id="send">Send</button></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</body>
+
+</html>
